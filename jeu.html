@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Un jue d'aventure</title>
+		<title>Un jeu d'aventure</title>
 	</head>
+	<body>
+	<div id="choixperso">
+	<p>Choisissez votre personnage :</p>
+		<label for="Barbare">Barbare<img src="https://static.wikia.nocookie.net/heros/images/b/b7/Barbare_Donjon_de_Naheulbeuk_Infobox.png/revision/latest?cb=20210409212513&path-prefix=fr"</label>
+		<input type="radio" name="perso" value="Barbare" checked />
+		<label for="Elfe">Elfe<img src="https://static.wikia.nocookie.net/heroes-fr/images/0/0d/Elfe_Art.png/revision/latest?cb=20201008070841&path-prefix=fr"></label>
+		<input type="radio" name="perso" value="Elfe" />
+		<label for="Voleur">Voleur <img src="https://image.noelshack.com/fichiers/2014/50/1418060524-sans-t162.png"></label>
+		<input type="radio" name="perso" value="Voleur" />
+		<label for="Ogre">Ogre <img src="https://static.wikia.nocookie.net/wikidupeuple/images/b/b6/Ogre_Art.png/revision/latest?cb=20101010210557&path-prefix=fr"</label>
+		<input type="radio" name="perso" value="Ogre" />
+		<button id="validation">Valider votre choix</button>
+		<script src="jeu.js"></script>
+	</body>
