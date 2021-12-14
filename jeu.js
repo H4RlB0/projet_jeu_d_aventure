@@ -1,6 +1,10 @@
 let form = document.getElementById('validation');
 form.addEventListener('click', personnage);
 
+document.getElementById('PorteDonjon').style.display = "None";
+document.getElementById('EntreeDonjon').style.display = "None";
+document.getElementById('honte').style.display = "None";
+
 function personnage(){
 	let radios=document.getElementsByName('perso');
 	let character;
