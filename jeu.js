@@ -2,12 +2,16 @@ let form = document.getElementById('validation');
 form.addEventListener('click', personnage);
 
 document.getElementById('PorteDonjon').style.display = "None";
-document.getElementById('EntreeDonjon').style.display = "None";
+document.getElementById('EntreeDonjon1').style.display = "None";
+document.getElementById('EntreeDonjon2').style.display = "None";
 document.getElementById('honte').style.display = "None";
+document.getElementById('mort1').style.display = "None";
+document.getElementById('menup').style.display = "None";
+
+let character;
 
 function personnage(){
 	let radios=document.getElementsByName('perso');
-	let character;
 			for (var i=0; i<radios.length;i++){
 				if (radios[i].checked){
 					character=radios[i].value;
@@ -16,10 +20,10 @@ function personnage(){
 	console.log(character)
 	document.getElementById('choixperso').style.display = "None";
 	afficherTextes(character);
-	let a = document.getElementById('valider');
-	a.addEventListener('click', valid);
-	let b = document.getElementById('revenir');
-	b.addEventListener('click', reven);
+	let afr = document.getElementById('valider');
+	afr.addEventListener('click', valid);
+	let bfr = document.getElementById('revenir');
+	bfr.addEventListener('click', reven);
 }
 
 function afficherTextes(character){
@@ -52,27 +56,69 @@ function reven(){
 	document.getElementById('choixperso').style.display = "Block";
 }
 
-let c = document.getElementById('1b');
-c.addEventListener('click', penetrer);
+let cfr = document.getElementById('1b');
+cfr.addEventListener('click', penetrer);
 
 function penetrer(){
 	document.getElementById('PorteDonjon').style.display = "None";
-	document.getElementById('EntreeDonjon').style.display = "Block";
+	document.getElementById('EntreeDonjon1').style.display = "Block";
 }
 
-let d = document.getElementById('1a')
-d.addEventListener('click', shame)
+let dfr = document.getElementById('1a')
+dfr.addEventListener('click', shame)
 
 function shame(){
-	document.getElementById('PorteDonjon').style.display = "None"
-	document.getElementById('honte').style.display = "Block"
+	document.getElementById('PorteDonjon').style.display = "None";
+	document.getElementById('honte').style.display = "Block";
+	document.getElementById('menup').style.display = "Block";
 }
 
-let e = document.getElementById('menup')
-e.addEventListener('click', menup)
+let efr = document.getElementById('menup')
+efr.addEventListener('click', menup)
 
 function menup(){
 	document.getElementById('honte').style.display = "None";
-	document.getElementById('choixperso').style.display = "Block"
+	document.getElementById('menup').style.display = "None";
+	document.getElementById('mort1').style.display = "None" ;
+	document.getElementById('choixperso').style.display = "Block";
 }
+
+let ffr = document.getElementById('2a')
+ffr.addEventListener('click', mort1)
+
+function mort1(){
+	if (character == "Voleur"){
+		document.getElementById('EntreeDonjon1').style.display = "None";
+		document.getElementById('mort1').style.display = "Block";
+		document.getElementById('menup').style.display = "Block";}
+	else {
+		document.getElementById('EntreeDonjon1').style.display = "None";
+		document.getElementById('EntreeDonjon2').style.display = "Block";
+	}
+	
+	
+}
+let gfr = document.getElementById('2b')
+gfr.addEventListener('click', discret)
+
+function discret(){
+	if (character == 'Barbare' || character == 'Ogre'){
+		document.getElementById('EntreeDonjon1').style.display = "None";
+		document.getElementById('EntreeDonjon2').style.display = "Block";
+	}
+	else if (character == 'Elfe'){
+		document.getElementById('EntreeDonjon1').style.display = "None";
+		document.getElementById('mort1').style.display = "Block";
+		document.getElementById('menup').style.display = "Block";}
+	}
+	else{
+		document.getElementById('EntreeDonjon1').style.display = "None";
+		document.getElementById('EntreeDonjon2').style.display = "Block";
+	}
+	
+}
+
+
+
+
 
