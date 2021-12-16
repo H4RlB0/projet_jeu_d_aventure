@@ -7,6 +7,8 @@ document.getElementById('EntreeDonjon2').style.display = "None";
 document.getElementById('honte').style.display = "None";
 document.getElementById('mort1').style.display = "None";
 document.getElementById('menup').style.display = "None";
+document.getElementById('mort2').style.display = "None";
+document.getElementById('reveil').style.display = "None";
 
 let character;
 
@@ -77,9 +79,14 @@ let efr = document.getElementById('menup')
 efr.addEventListener('click', menup)
 
 function menup(){
-	document.getElementById('honte').style.display = "None";
-	document.getElementById('menup').style.display = "None";
-	document.getElementById('mort1').style.display = "None" ;
+	document.getElementById('PorteDonjon').style.display = "None";
+document.getElementById('EntreeDonjon1').style.display = "None";
+document.getElementById('EntreeDonjon2').style.display = "None";
+document.getElementById('honte').style.display = "None";
+document.getElementById('mort1').style.display = "None";
+document.getElementById('menup').style.display = "None";
+document.getElementById('mort2').style.display = "None";
+document.getElementById('reveil').style.display = "None";
 	document.getElementById('choixperso').style.display = "Block";
 }
 
@@ -103,20 +110,19 @@ gfr.addEventListener('click', discret)
 
 function discret(){
 	if (character == 'Barbare' || character == 'Ogre'){
+		document.getElementById('reveil').style.display = "Block"
 		document.getElementById('EntreeDonjon1').style.display = "None";
 		document.getElementById('EntreeDonjon2').style.display = "Block";
 	}
-	else if (character == 'Elfe'){
+	else {if (character == 'Elfe'){
+			document.getElementById('EntreeDonjon1').style.display = "None";
+			document.getElementById('mort2').style.display = "Block";
+			document.getElementById('menup').style.display = "Block";}
+		else{
 		document.getElementById('EntreeDonjon1').style.display = "None";
-		document.getElementById('mort1').style.display = "Block";
-		document.getElementById('menup').style.display = "Block";}
+		document.getElementById('EntreeDonjon2').style.display = "Block";}
+		}
 	}
-	else{
-		document.getElementById('EntreeDonjon1').style.display = "None";
-		document.getElementById('EntreeDonjon2').style.display = "Block";
-	}
-	
-}
 
 
 
