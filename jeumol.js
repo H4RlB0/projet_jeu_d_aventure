@@ -138,7 +138,7 @@ troisa.addEventListener('click', ()=>{
 
 let okun = document.getElementById('ok1')
 okun.addEventListener('click', ()=>{
-	vie = vie - 12;
+	vie -= 12;
 	afficheetape('annonce1', 4);
 })
 
@@ -155,7 +155,7 @@ troisb.addEventListener('click', ()=>{
 
 let okdeux = document.getElementById('ok2')
 okdeux.addEventListener('click', ()=>{
-	vie = vie - 12;
+	vie -= 12;
 	afficheetape('annonce2', 4);
 })
 
@@ -590,6 +590,8 @@ dixneufa.addEventListener('click',()=>{
 	}
 	else{
 		afficheetape(19,'mort19')
+		document.getElementById('mort').style.display="Block";
+		document.getElementById('stats').remove();
 	}
 })
 
