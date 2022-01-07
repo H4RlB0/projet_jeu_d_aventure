@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Un jeu d'aventure</title>
+		<link href="jeumol.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+	<div id="choixperso">
+		<p>Choisissez votre personnage :</p>
+		<label for="Barbare">Barbare<img src="https://static.wikia.nocookie.net/heros/images/b/b7/Barbare_Donjon_de_Naheulbeuk_Infobox.png/revision/latest?cb=20210409212513&path-prefix=fr"</label>
+		<input type="radio" name="perso" value="Barbare" checked />
+		<label for="Elfe">Elfe<img src="https://static.wikia.nocookie.net/heroes-fr/images/0/0d/Elfe_Art.png/revision/latest?cb=20201008070841&path-prefix=fr"></label>
+		<input type="radio" name="perso" value="Elfe" /><br>
+		<label for="Voleur">Voleur <img src="https://image.noelshack.com/fichiers/2014/50/1418060524-sans-t162.png"></label>
+		<input type="radio" name="perso" value="Voleur" />
+		<label for="Ogre">Ogre <img src="https://static.wikia.nocookie.net/wikidupeuple/images/b/b6/Ogre_Art.png/revision/latest?cb=20101010210557&path-prefix=fr"</label>
+		<input type="radio" name="perso" value="Ogre" />
+		<button id="validation">Valider votre choix</button>
+	</div>
+	<div id='etape1' class ='etape' ><p>Bienvenu jeune aventurier vous êtes la fiertée de votre clan qui place beaucoup d'espoir en vous pour venir a bout de ce donjon! Mais aurez vous le courage d'y penetrer? Personne n'y est jamais ressorti à ce qu'on dit ...mais il faut bien avouer que personne n'y est jamais entré non plus!</p>
+		<div class='opt'><button id="1a">Rebrousser chemin ...</button><button id="1b">Rentrer dans le donjon</button></div>
+	</div>
+	<div id='etape2' class ='etape' ><p>Un garde vous empeche d'aller plus loin :</p>
+		<div class='opt'><button id="2a">Essayer de passer en force</button><button id="2b">Le divertire avec du sable et essayer de passer en courant</button></div>
+	</div>
+	<div id='etape3' class ='etape' ><p>Le garde derrière vous, vous ouvrez une seconde porte et un gobelin vous attaque :</p>
+		<div class='opt'><button id="3a">Encaisser le coup </button><button id="3b">Esquiver le coup</button></div>
+	</div>
+	<div id='etape4' class ='etape' >
+		<p class = "">Vous ripostez</p>
+		<div class='opt'><button id="4a">Frapper le gobelin</button><button id="4b">Balayer le gobelin</button></div>
+	</div>
+	<div id='etape5' class ='etape' >
+		<p>Le gobelin est ko et laisse tomber sa sacoche :</p>
+		<div class='opt'><button id="5a">Récuperer son couteau</button><button id="5b">Récupérer son casque</button><button id="5c">Récupérer sa bouteille d'alcool</button></div>
+	</div>
+	<div id='etape6' class ='etape' >
+		<p>Derrière le corps du gobelin se trouve un pont au dessus d'une crevasse n'aillant pas l'air solide:</p>
+		<div class='opt'><button id="6a">Tenter la traversée du pont</button><button id="6b">Sauter en bas de la crevace et escalader la paroie</button></div>
+	</div>
+	<div id='etape7' class ='etape' >
+		<p>Une fois de l'autre côté vous apercever un coffre fermé devant vous:</p>
+		<div class='opt'><button id="7a">Casser le dessus du coffre</button><button id="7b">forcer l'ouverture</button></div>
+	</div>
+	<div id='etape8' class ='etape' >
+		<p>3 potions se trouvent dedans :</p>
+		<div class='opt'><button id="8a">Prendre la rouge</button><button id="8b">Prendre la jaune</button><button id="8c">Prendre la verte</button><button id="8d">N'en prendre aucune</button></div>
+	</div>
+	<div id='etape9' class ='etape' >
+		<p>Vous entrez dans la pièce suivante , un slime vous regarde vous n'y prété pas garde lorsque soudain, il grossit et vous saute dessus</p>
+		<div id='opt'><button id='9' >ok</button></div>
+	</div>
+	<div id='etape10' class ='etape' >
+		<p>Le slime s'apprête à attaquer à nouveau :</p>
+		<div class='opt'><button id="10a">L'attaquer par surprise</button><button id="10b">Encaisser le coup et riposter</button></div>
+	</div>
+	<div id='etape11' class ='etape' >
+		<p>Vous touchez le slime mais ce dernier survie :</p>
+		<div class='opt'><button id="11a">ok</button></div>
+	</div>
+	<div id='etape12' class ='etape' >
+		<p>Vous vous appretez à porter un second coup</p>
+		<div class='opt'><button id="12">ok</button></div>
+	</div>
+	<div id='etape13' class ='etape' >
+		<p>Après sa mort le slime laisse parraître deux gouttes de slime</p>
+		<div class='opt'><button id="13a">Manger celle de gauche</button><button id="13b">Manger celle de droite</button><button id="13c">N'en manger aucune</button></div>
+	</div>
+	<div id='etape14' class ='etape' >
+		<p>Devant vous se dresse un long couloir avce une porte au bout</p>
+		<div class='opt'><button id="14a">Avancer prudement</button><button id="14b">Courir comme un dératé et enfoncer la porte</button></div>
+	</div>
+	<div id='etape15' class ='etape' >
+		<p>Vous attérissez sur un tas d'os ce qui amortit votre chute. Vous entendez des craquement en dessous de vous. Soudain un squelette émane de sous le tas et se place juste devant vous. Il veut vous parler :</p>
+		<div class='opt'><button id="15a">Lui répondre</button><button id="15b">Lui assener un coup</button><button id="15c">Lui jeter un crâne</button><button id="15d">Lui demander comment sortir</button></div>
+	</div>
+	<div id='etape16' class ='etape' >
+		<p>Ce squelette vous à bien fait peur, vous vous empressez de monter a l'échelle derrière lui. Vous arrivez enfin à la porte au fond du couloir. Vous poussez la porte et vous entrez .L’air est pesant… la pièce est plongée dans le noir .Vous frissonnez, vous avez l’impression d’être observé .Vous avancez lentement jusqu’à tomber par hasard sur un sac .Vous jetez un œil à l’intérieur .Vous vous servez comme si ça vous appartenait.</p>
+		<div class='opt'><button id="16">suivant</button></div>
+	</div>
+	<div id='etape17' class ='etape' >
+		<p>Puis soudain des torches s'allument autour de la pièce. Vous êtes effrayé par ce qui se trouve devant vous. La sacoche que vous venez de voller appartient à un corps sur le sol. Le cadavre vous regarde, malgré son regard vitreux, le visage tranché par une énorme épée vous reconnaissez ce visage avec effroi. C'est vous.</p>
+		<div class='opt'><button id="17">suivant</button></div>
+	</div>
+	<div id='etape18' class ='etape' >
+		<p><strong>BOUM</strong> Un géant vient d'apparaître</p>
+		<div class='opt'><button id="18a">Vous reculez.</button><button id="18b">Vous vous ruez vers lui.</button></div>
+	</div>
+	<div id='etape19' class ='etape' >
+		<p>Vous vous apprétez à attaquer</p>
+		<div class='opt'><button id="19a">Attaquer au niveau des jambes.</button><button id="19b">Lui assainer un coup puissant dans le torse</button><button id="19c">Lancer ce qui vous passe sous la main.</button></div>
+	</div>
+	<div id='etape20' class ='etape' >
+		<p>Le géant reste debout vous vous apprétez à attaquer</p>
+		<div class='opt'><button id="20a">Le charger et lui donner un coup de tête</button><button id="20b">Lui assainer une pluie de coups</button><button id="20c">Fraper au niveau de l'entre-jambe</button></div>
+	</div>
+	<div id='etape21' class ='etape' >
+		<p>Le géant commence à s’énerver. Il s'avance vers vous. Vous reculez puis vous trébuchez sur quelque chose. Chose étonnante il n’y a rien qui aurai pu voir faire trébucher. La sacoche à disparu ainsi que le cadavre. Le géant approche l’épée à la main. L’épée s’abat sur vous. Il fait soudain sombre. Vous ne sentez plus aucune douleur. Une douce chaleur émane. Puis un bruit. Vous ouvrez les yeux. Vous êtes devant une tour. Une voix vous parle :</p>
+		<div class='opt'><button id="21">suivant</button></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div id="etapeannonce1" class="etape">
+		<p>Vous perdez 12 points de vie</p>
+		<div class="opt"><button id="ok1">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce2" class="etape">
+		<p>Vous n'êtes pas assez rapide mais vous parvenez à résister et à tuer le gobelin, vous perdez 12 points de vie</p>
+		<div class="opt"><button id="ok2">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce3" class="etape">
+		<p>Le couteau vous confère deux de force en plus</p>
+		<div class="opt"><button id="ok3">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce4" class="etape">
+		<p>Le casque vous confère 4 points de vie supplémentaires</p>
+		<div class="opt"><button id="ok4">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce5" class="etape">
+		<p>Vous buvez la bouteille d'alcool vous gagnez 4 de force mais vous êtes saoûl, vous perdez 2 en vitesse</p>
+		<div class="opt"><button id="ok5">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce6" class="etape">
+		<p>Vous sautez en bas de la crevace et parvenez à vous hisser jusqu'en haut. Cependant la chute vous fais perdre 5 points de vie </p>
+		<div class="opt"><button id="ok6">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce7" class="etape">
+		<p>Vous gagnez 3 de force</p>
+		<div class="opt"><button id="ok7">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce8" class="etape">
+		<p>Vous gagnez 4 points de vie</p>
+		<div class="opt"><button id="ok8">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce9" class="etape">
+		<p>la potion était empoisonnée vous perdez 4 points de vie</p>
+		<div class="opt"><button id="ok9">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce10" class="etape">
+		<p>Vous parvenez à esquiver le coup</p>
+		<div class="opt"><button id="ok10">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce11" class="etape">
+		<p>Vous ne parvenez pas à esquiver le coup et subissez 5 points de dégats</p>
+		<div class="opt"><button id="ok11">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce12" class="etape">
+		<p>Votre coup ne tue pas le slime il vous attaque et vous perdez 10 points de vie. Un second coup vous permet de venir à bout du monstre</p>
+		<div class="opt"><button id="ok12">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce13" class="etape">
+		<p>Une fée apparaît et vous confère un nombre compris entre 1 et 6 de force supplémentaire qui va venir s'ajouter a votre force actuelle:</p>
+		<div class="opt"><button id="ok13">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce14" class="etape">
+		<p>Vous encaissez le coup qui vous retir 10 points de vie vous portez un coup au slime .Et vous tuez le slime d'un seul coup</p>
+		<div class="opt"><button id="ok14">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce15" class="etape">
+		<p>Vos forces combinées viennent à bout du slime</p>
+		<div class="opt"><button id="ok15">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce16" class="etape">
+		<p>Vous gagnez 2 de vitesse</p>
+		<div class="opt"><button id="ok16">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce17" class="etape">
+		<p>Vous gagnez 6 points de vie</p>
+		<div class="opt"><button id="ok17">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce18" class="etape">
+		<p>En arrivant devant la porte vous tombez dans un trou</p>
+		<div class="opt"><button id="ok18">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce19" class="etape">
+		<p>Dans votre prudance vous marchez sur une dalle piegez étant assez vif vous parvenez à esquiver la flèche qui sort du mur. Vous continuez votre chemin et arrivé devant la porte vous tombez dans un trou</p>
+		<div class="opt"><button id="ok19">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce20" class="etape">
+		<p>Dans votre prudance vous marchez sur une dalle piegez n'étant pas assez vif vous ne parvenez pas à esquiver la flèche qui sort du mur et perdez 4 points de vie. Vous continuez votre chemin et arrivé devant la porte vous tombez dans un trou</p>
+		<div class="opt"><button id="ok20">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce21" class="etape">
+		<p>"-Tu es le premier humain que je vois depuis bien longtemps... tu vas rester avec moi?" Vous perdez patience et vous lui assenez un coup.</p>
+		<div class="opt"><button id="ok21">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce22" class="etape">
+		<p>Le squelette vous indique une echelle derrière lui vous vous y dirigez.</p>
+		<div class="opt"><button id="ok22">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce23" class="etape">
+		<p>Vous trouvez une massue et une bouteille d'alcool. Vous gagnez 4 de force et 9 points de vie.</p>
+		<div class="opt"><button id="ok23">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce24" class="etape">
+		<p>Vous trouvez une épée. Vous gagnez 4 de force et 6 en vitesse.</p>
+		<div class="opt"><button id="ok24">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce25" class="etape">
+		<p>Vous trouvez un arc et un carquois . Vous gagnez 6 de force et 4 points de vie.</p>
+		<div class="opt"><button id="ok25">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce26" class="etape">
+		<p>Vous trouvez une dague et une potion . Vous gagnez 6 de force et 4 points de vie</p>
+		<div class="opt"><button id="ok26">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce27" class="etape">
+		<p>Le géant ne bronche pas et vous retire 8 points de vie d'un seul coup de point.</p>
+		<div class="opt"><button id="ok27">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce28" class="etape">
+		<p>Le géant ne bronche pas et le choc à la tête vous fait perdre 4 points de vie.</p>
+		<div class="opt"><button id="ok28">Ok</button></div></div>
+	</div>
+	<div id="etapeannonce29" class="etape">
+		<p>Le géant arrète votre main juste avant l'impact. Il vous la broie d'une main et de l'autre vous assaine un coup d'épée qui vous enlève 10 points de vie</p>
+		<div class="opt"><button id="ok29">Ok</button></div></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div id='etapemort1' class ='etape' >
+	<p>Vous ne parvenez pas à éliminer le garde qui riposte et vous décapite</p>
+	</div>
+	<div id='etapemort2' class ='etape' >
+	<p>Vous n'êtes pas assez rapide le garde riposte et vous décapite</p>
+	</div>
+	<div id='etapemort3' class ='etape' >
+	<p>Vous n'êtes pas assez résitant le coup vous tue</p>
+	</div>
+	<div id='etapemort4' class ='etape' >
+	<p>Vous n'êtes pas assez fort, le gobelin résiste et vous tue</p>
+	</div>
+	<div id='etapemort5' class ='etape' >
+	<p>Vous n'êtes pas assez rapide, le gobelin esquive et vous tue</p>
+	</div>
+	<div id='etapemort6' class ='etape' >
+	<p>Vous n'êtes pas assez rapide, le pont cède sous votre poids, vous tombez en bas de la crevasse et faites une chute mortelle</p>
+	</div>
+	<div id='etapemort7' class ='etape' >
+	<p>Vous faites une chute mortelle</p>
+	</div>
+	<div id='etapemort8' class ='etape' >
+	<p>Vous vous retrouvez en bas mais vous n'êtes pas assez fort pour remonter, vous êtes donc condamner à passer vos dernieres heures ici avant que des monstres vous trouvent</p>
+	</div>
+	<div id='etapemort9' class ='etape' >
+	<p>la potion était empoisonnée vous perdez 4 points de vie et vous mourez</p>
+	</div>
+	<div id='etapemort10' class ='etape' >
+	<p>Vous ne parvenez pas à esquiver le coup et subissez 5 points de dégats qui vous sont fatals</p>
+	</div>
+	<div id='etapemort11' class ='etape' >
+	<p>Vous n'êtes pas assez rapide , le coup vous touche et vous mourez</p>
+	</div>
+	<div id='etapemort12' class ='etape' >
+	<p>Vous ne parvenez pas à encaisser le coup et vous périssez</p>
+	</div>
+	<div id='etapemort13' class ='etape' >
+	<p>Vous ne parvenez à encaisser mais n'êtes pas assez fort pour tuer le slime qui vous achève.</p>
+	</div>
+	<div id='etapemort14' class ='etape' >
+	<p>Même combinées vos forces ne parvienent pas à bout du slime . Vous mourez</p>
+	</div>
+	<div id='etapemort15' class ='etape' >
+	<p>Dans votre prudance vous marchez sur une dalle piegez n'étant pas assez vif vous ne parvenez pas à esquiver la flèche qui sort du mur et perdez 4 points de vie qui vous sont fatals.</p>
+	</div>
+	<div id='etapemort16' class ='etape' >
+	<p>Vous n'êtes pas assez fort ,le squelette ne bouge même vous regarde et aspire votre âme ,vous mourez.</p>
+	</div>
+	<div id='etapemort17' class ='etape' >
+	<p>Vous n'êtes pas assez rapide, le squelette vous voit venir vous regarde er aspire votre âme , vous mourez.</p>
+	</div>
+	<div id='etapemort18' class ='etape' >
+	<p>Vous n'êtes pas assez rapide, le géant vous attrape et vous brois la tête</p>
+	</div>
+	<div id='etapemort19' class ='etape' >
+	<p>Vous n'êtes pas assez rapide, le géant vous vois venir et vous écrase la tête avec son pied </p>
+	</div>
+	<div id='etapemort20' class ='etape' >
+	<p>Le géant ne bronche pas et vous tue d'un coup de point.</p>
+	</div>
+	<div id='etapemort21' class ='etape' >
+	<p>Le choc à la tête vous fais perdre connaissance et vous laisse à la merci du géant.</p>
+	</div>
+	<div id='etapemort22' class ='etape' >
+	<p>Lors de votre salve de coup le géant vous attrape et vou lance violement contre le sol votre colone vertebrale ne résiste pas vous tuant sur le coup.</p>
+	</div>
+	<div id='etapemort23' class ='etape' >
+	<p>Le géant arrète votre main juste avant l'impact. Il vous la broie d'une main et de l'autre vous assaine un coup d'épée qui vous est mortel</p>
+	</div>
+	<div class='opt' id="mort" ><button>Retourner au menu</button></div>
+	<script src="jeumol.js"></script>
+	</body>
